@@ -1,0 +1,14 @@
+你好，请问HMS里面哪个kit, 哪些API能在应用里支持emojis for Huawei devices？CP想在华为手机上用Emoji但找不到能替代 Google's providerAuthority/PackageFor 的API,  代码CP用来 init EmojiCompat:
+
+ val fontRequest = FontRequest(
+            "com.google.android.gms.fonts",
+            "com.google.android.gms",
+            "Noto Color Emoji Compat",
+            R.array.com_google_android_gms_fonts_certs
+        )
+        val config = FontRequestEmojiCompatConfig(context, fontRequest)
+        EmojiCompat.init(config)
+
+但上述代码在华为手机上不work, and EmojiCompat doesn't get initialized. 他不想用BundledEmojiCompatConfig， 想用上面代码中的font 类API. 
+
+请帮助，谢谢
